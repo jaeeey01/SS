@@ -1,0 +1,79 @@
+buildscript {
+    ext{
+        queryDslVersion = "5.0.0"
+    }
+}
+
+plugins {
+    id 'org.springframework.boot' version '2.6.1'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'war'
+    id "com.ewerk.gradle.plugins.querydsl" version "1.0.10" // (1) querydsl 플러그인을 추가합니다.
+}
+
+group = 'com.exam'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
+    annotationProcessor 'org.projectlombok:lombok'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+/*    // 소셜 로그인 등 클라이언트 입장에서 소셜 기능을 구현시 필요한 의존성
+    compileOnly('org.springframework.boot:spring-boot-starter-oauth2-client')*/
+
+/*    //데이터베이스에 세션을 저장하여 사용하기 위함
+    implementation 'org.springframework.session:spring-session-jdbc'*/
+
+
+    implementation "com.querydsl:querydsl-jpa:${queryDslVersion}" // (2) 라이브러리 dependency를 추가합니다.
+    implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
+
+// https://mvnrepository.com/artifact/org.json/json
+    implementation group: 'org.json', name: 'json', version: '20160810'
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+def querydslDir = "$buildDir/generated/querydsl" // (3)  querydsl에서 사용할 경로를 선언합니다.
+
+querydsl { // (4) querydsl 설정을 추가합니다. JPA 사용 여부와 사용할 경로를 지정하였습니다.
+    jpa = true
+    querydslSourcesDir = querydslDir
+}
+
+sourceSets { // (5) build시 사용할 sourceSet을 추가합니다.
+    main.java.srcDir querydslDir
+}
+compileQuerydsl { // (7) querydsl 컴파일시 사용할 옵션을 설정합니다.
+    options.annotationProcessorPath = configurations.querydsl
+}
+configurations { // (6) querydsl이 compileClassPath를 상속하도록 설정합니다.
+    compileOnly{
+        extendsFrom annotationProcessor
+    }
+    querydsl.extendsFrom compileClasspath
+}
+
+

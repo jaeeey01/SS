@@ -32,11 +32,14 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-    runtimeOnly 'com.oracle.database.jdbc:ojdbc8'
     annotationProcessor 'org.projectlombok:lombok'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation ('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
 
+// https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
+    runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.7.3' //runtimeOnly 실행시점에만 필요
 /*    // 소셜 로그인 등 클라이언트 입장에서 소셜 기능을 구현시 필요한 의존성
     compileOnly('org.springframework.boot:spring-boot-starter-oauth2-client')*/
 

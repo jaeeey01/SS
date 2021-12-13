@@ -61,6 +61,7 @@
 .menu-list-box ul {
     list-style: none;
 }
+
 .menu-list-box ul li {
     height: 20px;
     margin-top: 15px;
@@ -71,32 +72,25 @@
     cursor: pointer;
     padding-left: 10px;
     background: #dddee0;
-    border-radius: 10px;
-}
-.SideMenu {
-    border: 1px solid gray;
-    min-width: 350px;
-    min-height: 1000px;
-}
-
-.SideMenu-list ul {
-    list-style: none;
+    border-radius: 5px;
 }
 
 .nav-right-area ul {
     list-style: none;
 }
 
-.nav-right-area ul li {
+.nav-right-area > ul > li {
     float: left;
+}
+
+.nav-wrapper {
+    width: 100%;
+    background: white;
+    position: fixed;
 }
 
 @media screen and (max-width: 744px){
     .nav_container {
        display: block;
-    }
-
-    .sideMenu {
-        width: 100px;
     }
 }

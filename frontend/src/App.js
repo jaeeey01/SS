@@ -9,7 +9,7 @@ class App extends Component{
     return (
         <Fragment>
             <Navigation />
-            <div className='Main-container'>
+            <div className='main-container'>
                 <div>
                     <SideMenu />
                 </div>

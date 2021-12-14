@@ -1,7 +1,7 @@
 package com.example.ss.Service.Board;
 
-import com.example.ss.Domain.BoardDTO;
-import com.example.ss.Repository.BoardRepository;
+import com.example.ss.DTO.BoardDTO;
+import com.example.ss.Domain.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

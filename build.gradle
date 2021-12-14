@@ -40,8 +40,8 @@ dependencies {
 
 // https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client
     runtimeOnly 'org.mariadb.jdbc:mariadb-java-client:2.7.3' //runtimeOnly 실행시점에만 필요
-/*    // 소셜 로그인 등 클라이언트 입장에서 소셜 기능을 구현시 필요한 의존성
-    compileOnly('org.springframework.boot:spring-boot-starter-oauth2-client')*/
+  // 소셜 로그인 등 클라이언트 입장에서 소셜 기능을 구현시 필요한 의존성
+    compileOnly('org.springframework.boot:spring-boot-starter-oauth2-client')
 
 /*    //데이터베이스에 세션을 저장하여 사용하기 위함
     implementation 'org.springframework.session:spring-session-jdbc'*/
@@ -52,6 +52,7 @@ dependencies {
 
 // https://mvnrepository.com/artifact/org.json/json
     implementation group: 'org.json', name: 'json', version: '20160810'
+
 
 }
 

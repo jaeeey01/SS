@@ -1,7 +1,7 @@
 package com.example.ss.Service.Users;
 
-import com.example.ss.Domain.UsersDTO;
-import com.example.ss.Entity.UsersEntity;
+import com.example.ss.DTO.UsersDTO;
+import com.example.ss.Domain.UsersEntity;
 
 public interface UsersService {
     
@@ -9,7 +9,7 @@ public interface UsersService {
     default UsersEntity entityToDto(UsersDTO dto){
         
         return UsersEntity.builder()
-                            .Id(dto.getId())
+                            .id(dto.getId())
                             .gender(dto.getGender())
                             .nickname(dto.getNickname())
                             .phone(dto.getPhone())

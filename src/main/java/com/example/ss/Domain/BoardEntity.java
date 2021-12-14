@@ -1,6 +1,5 @@
-package com.example.ss.Entity;
+package com.example.ss.Domain;
 
-import com.example.ss.Common.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;

@@ -1,8 +1,8 @@
 package com.example.ss.Service.Board;
 
-import com.example.ss.Domain.BoardDTO;
-import com.example.ss.Entity.BoardEntity;
-import com.example.ss.Entity.UsersEntity;
+import com.example.ss.DTO.BoardDTO;
+import com.example.ss.Domain.BoardEntity;
+import com.example.ss.Domain.UsersEntity;
 
 public interface BoardService {
 
@@ -10,7 +10,7 @@ public interface BoardService {
 
     default BoardEntity dtoToEntity(BoardDTO dto){
 
-        UsersEntity userId = UsersEntity.builder().Id(dto.getBWriter()).build();
+        UsersEntity userId = UsersEntity.builder().id(dto.getBWriter()).build();
 
         return BoardEntity.builder()
                             .boNo(dto.getBoNo())

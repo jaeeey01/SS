@@ -1,6 +1,5 @@
-package com.example.ss.Repository;
+package com.example.ss.Domain;
 
-import com.example.ss.Entity.BoardEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

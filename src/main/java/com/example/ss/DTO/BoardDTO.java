@@ -1,6 +1,5 @@
-package com.example.ss.Domain;
+package com.example.ss.DTO;
 
-import com.example.ss.Entity.UsersEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

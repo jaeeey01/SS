@@ -71,7 +71,7 @@ function SideMenu () {
 
                 <footer className='Modal-footer'>
                     <div className='Modal-bottom'>
-                        <p>계정이 없으신가요??? <a href=''>가입하기</a></p>
+                        <p>계정이 없으신가요? <a className='join' href=''>가입하기</a></p>
                     </div>
                 </footer>
 

@@ -4,6 +4,7 @@ import Navigation from "./components/common/Navigation";
 import SideMenu from "./components/common/SideMenu";
 import MainIndex from "./components/MainIndex";
 
+
 class App extends Component{
   render () {
     return (
@@ -17,6 +18,8 @@ class App extends Component{
                     <MainIndex />
                 </div>
             </div>
+
+
 
         </Fragment>
     );

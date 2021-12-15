@@ -93,11 +93,12 @@ button:hover {
     color: white;
 }
 .Modal-footer {
-    margin-top: 20px;
+    margin-top: 50px;
 }
 .Modal-bottom {
+    font-size: 12px;
     border-top: 1px solid #d2cfcf;
-    padding-top: 20px;
+    padding-top: 10px;
     width: 100%;
     text-align: left;
 }
@@ -127,5 +128,14 @@ button:hover {
     padding-left: 10px;
 }
 
+.join {
+    margin-left: 10px;
+    font-size: 13px;
+    color: #ce1e1e;
+    font-weight: bold;
+}
+.join:hover {
+    color: #f66161;
+}
 
 

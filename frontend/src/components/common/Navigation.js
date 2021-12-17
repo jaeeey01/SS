@@ -9,6 +9,10 @@ import '../../css/sideMenu.css'
 const Navigation = () => {
         const [ isModal, setIsModal ] = useState(false);
 
+        const test = () => {
+            console.log('TEST')
+        }
+
         return (
             <Fragment>
                 <div className='nav-wrapper'>
@@ -46,7 +50,6 @@ const Navigation = () => {
                         </div>
                     </nav>
                 </div>
-
                 ---------- Login Modal ----------
                 <Modal isOpen={isModal} style={
                     {content: {position: 'absolute', top: '60px', left: '40%', padding: '0',
@@ -66,7 +69,7 @@ const Navigation = () => {
                                 <li>
                                     <button>
                                         <img className='login-btn' src='https://t1.daumcdn.net/cfile/tistory/998689465C3D7D1217' alt='구글로그인'/>
-                                        <GoogleBtn />
+                                        <GoogleBtn onClick={test()} />
                                     </button>
                                 </li>
                                 <li>
@@ -97,6 +100,9 @@ const Navigation = () => {
 
             </Fragment>
         );
+
 }
+
+
 
 export default Navigation;

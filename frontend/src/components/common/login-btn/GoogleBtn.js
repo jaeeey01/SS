@@ -14,6 +14,7 @@ const GoogleBtn = (props) => {
         email: res.profileObj.email,
         name: res.profileObj.name
         })
+
     }
 
     return(
@@ -21,7 +22,8 @@ const GoogleBtn = (props) => {
             <GoogleLogin clientId={googleClientId}
                         onSuccess={result => onLoginSuccess(result)}
                         onFailure={result => console.log(result)}
-                        cookiePolicy='single_host_origin' />
+                        cookiePolicy='single_host_origin'
+                        />
         </Fragment>
     );
 };

@@ -18,9 +18,6 @@ class App extends Component{
                     <MainIndex />
                 </div>
             </div>
-
-
-
         </Fragment>
     );
   }

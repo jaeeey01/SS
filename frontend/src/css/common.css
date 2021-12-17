@@ -113,7 +113,6 @@ button:hover {
     margin: auto;
     width: 270px;
     height: 350px;
-    overflow: scroll;
  }
 
 .login-group > ul{

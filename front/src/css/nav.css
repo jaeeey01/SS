@@ -42,11 +42,29 @@
 .nav-menu-btn{
     margin-left: 20px;
 }
+.login {
+    border-radius: 7px;
+    color: white;
+    background: #f83838;
+    width: 100px;
+    height: 30px;
+}
+.login:hover {
+    cursor: pointer;
+    background: #ef1818;
+}
 
 .nav-menu-img {
     width: 27px;
 }
-
+.menu-box-edge{
+    display: none;
+    width: 0;height: 0;
+    border-top:50px solid none;
+    border-bottom:10px solid #f6f6f6;
+    border-right: 10px solid transparent;
+    border-left: 10px solid  transparent;
+}
 .menu-list-box{
     display: none;
 }

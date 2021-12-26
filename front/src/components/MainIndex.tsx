@@ -1,6 +1,8 @@
 import React, {Component, Fragment} from "react";
 import '../css/common.css'
 
+
+
 class MainIndex extends Component{
     render () {
         return (

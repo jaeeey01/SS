@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navigation from "./components/common/Navigation";
+import SideMenu from "./components/common/SideMenu";
+import MainIndex from "./components/MainIndex";
 
-function App() {
+import axios from "axios";
+
+async function test() {
+    const data = await axios.get('http://localhost:9020/api/board');
+}
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navigation />
+      <div className='main-container'>
+        <div>
+          <SideMenu />
+        </div>
+        <div>
+          <MainIndex />
+        </div>
+      </div>
+
     </div>
   );
 }
